@@ -1,0 +1,19 @@
+<template name="globalHelperExample">
+    <h3 class="page-header">全局helper实例</h3>
+    {{#each foods}}
+    <div class="row">
+        <div class="col-xs-4">
+            <input type="checkbox" checked="{{equal selected 'yes'}}">{{name}}
+        </div>
+    </div>
+    {{/each}}
+    <div class="row">
+        <div class="col-xs-4">
+            <select class="form-control">
+                {{#each foods}}
+                <option selected="{{equal selected 'yes'}}" value="{{name}}">{{name}}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+</template>

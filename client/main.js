@@ -15,6 +15,9 @@ if(Meteor.isClient){
         Router.route('/test2',function(){
             this.render('test2');
         })
+        Router.route('/globalHelperExample',function(){
+            this.render('globalHelperExample');
+        })
     })
 }
 
