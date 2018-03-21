@@ -1,0 +1,10 @@
+getContentListsFromUrl
+var reg = /kg[1-9]?.qq.com/g;
+        if(reg.test(data.host)){
+          return Drafts.insert({
+            type:'kg',
+            url:inputUrl,
+            mainImageUrl:data.imageArray[0],
+            title:data.title
+          })
+        }      
