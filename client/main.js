@@ -16,7 +16,18 @@ if(Meteor.isClient){
             this.render('test2');
         })
         Router.route('/globalHelperExample',function(){
-            this.render('globalHelperExample');
+            this.render('globalHelperExample',{
+                data:{foods:[
+                    {
+                                    selected:'no',
+                                    name:'烤肉'
+                                },
+                                {
+                                    selected:'yes',
+                                    name:'烤鸭'
+                                },
+                ]}
+            });
         })
     })
 }
