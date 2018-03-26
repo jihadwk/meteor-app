@@ -1,0 +1,24 @@
+<template name="users">
+    {{> insertForm}}
+    <ul>
+        {{#each users}}
+        {{> useritem}}
+        {{/each}}
+    </ul>
+</template>
+
+<template name="insertForm">
+    <p>姓名：<input id="username"/></p>
+    <p>年龄：<input id="age"/></p>
+    <p><button>保存</button></p>
+</template>
+
+<template name="useritem">
+        {{#if isEditing}}
+        <p>姓名：<input id="username" value="{{name}}"/></p>
+        <p>年龄：<input id="age" value="{{age}}"/></p>
+        <p><button>保存</button></p>
+        {{else}}
+        <li>name:{{name}},age:{{age}} <span class="edit" style="color:red">修改</span> <span class="remove" style="color:red">删除</span></li>
+        {{/if}}
+</template>

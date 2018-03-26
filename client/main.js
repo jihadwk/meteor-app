@@ -16,6 +16,8 @@ if(Meteor.isClient){
             this.render('test2');
         })
         Router.route('/globalHelperExample',function(){
+            //运行时绑定this
+            console.log('function:',this);
             this.render('globalHelperExample',{
                 data:{foods:[
                     {
@@ -28,6 +30,15 @@ if(Meteor.isClient){
                                 },
                 ]}
             });
+        })
+        // Router.route('/dbtest',()=>{
+            //this是全局window，定义时绑定this,无法成功跳转
+        //     console.log('=>',this);
+        //     this.render('users');
+        // })
+        Router.route('/dbtest',function(){
+            Meteor.subscribe('users');
+            this.render('users');
         })
     })
 }
