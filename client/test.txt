@@ -8,3 +8,6 @@ var reg = /kg[1-9]?.qq.com/g;
             title:data.title
           })
         }      
+
+e.stopImmediatePropagation();
+    e.preventDefault();

@@ -6,6 +6,10 @@ Template.selectFrame.helpers({
 
 if(Meteor.isClient){
     Meteor.startup(function(){
+        Meteor.subscribe('get-devices','1');
+        Router.configure({
+            layoutTemplate:'layout'
+        })
         Router.route('/',function(){
             this.render('home');
         });
@@ -39,6 +43,9 @@ if(Meteor.isClient){
         Router.route('/dbtest',function(){
             Meteor.subscribe('users');
             this.render('users');
+        })
+        Router.route('/sub',function(){
+            this.render('sub');
         })
     })
 }

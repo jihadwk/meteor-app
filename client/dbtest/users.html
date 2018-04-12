@@ -1,10 +1,12 @@
 <template name="users">
-    {{> insertForm}}
-    <ul>
-        {{#each users}}
-        {{> useritem}}
-        {{/each}}
-    </ul>
+    <div class="wrapper">
+        {{> insertForm}}
+        <ul>
+            {{#each users}}
+            {{> useritem}}
+            {{/each}}
+        </ul>
+    </div>
 </template>
 
 <template name="insertForm">

@@ -1,7 +1,7 @@
 Template.home.helpers({
     exampleList : function(){
         return [{name:'test1'},{name:'test2'},{name:'globalHelperExample'},
-            {name:'dbtest'}
+            {name:'dbtest'},{name:'sub'}
     ];
     }
 })
