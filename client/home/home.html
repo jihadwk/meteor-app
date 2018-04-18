@@ -15,14 +15,30 @@
                         <li class="flex2 flexcontent p5">3</li>
                     </ul>
                 </section> -->
-        {{#if exampleList }}
+        <!-- {{#if exampleList }}
         {{#each exampleList}}
         <p class = "hometext">{{name}}</p>
         {{/each}}
-        {{/if}}
+        {{/if}} -->
         <!-- <div class="content">
             <iframe height="100%" width="100%" src="http://kg.qq.com/node/play?s=9vGLfv9LWHq3l9DJ&g_f=share_html" frameborder="0" allowfullscreen></iframe>
         </div> -->
+        <div class="weui-grids">
+        {{#if exampleList }}
+        {{#each exampleList}}
+            <a class="weui-grid js_grid">
+                <div class="weui-grid__icon">
+                  <img src="{{url}}" alt="">
+                </div>
+                <p class="weui-grid__label">
+                  {{name}}
+                </p>
+            </a>
+        {{/each}}
+        {{/if}}
+
+        </div>
+        
     </div>
     
 </template>

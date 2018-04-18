@@ -3,12 +3,15 @@ Template.home.helpers({
         return [{name:'test1'},{name:'test2'},{name:'globalHelperExample'},
             {name:'dbtest'},{name:'sub'}
     ];
+    },
+    url:function(){
+       return 'images/icon_nav_panel.png'
     }
 })
 Template.home.events({
-    'click p': function(event){
+    'click a': function(event){
         event.preventDefault();
         event.stopPropagation();
-        Router.go('/'+ $(event.currentTarget).text());
+        Router.go('/'+ this.name);
     }
 })
